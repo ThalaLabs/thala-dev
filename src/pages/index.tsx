@@ -5,7 +5,7 @@ import {
   ListIcon,
   ListItem,
 } from "@chakra-ui/react";
-import { CheckCircleIcon, LinkIcon } from "@chakra-ui/icons";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 import { Hero } from "../components/Hero";
 import { Container } from "../components/Container";
@@ -17,28 +17,33 @@ const Index = () => (
   <Container height="100vh">
     <Hero />
     <Main>
-      <Text color="text">
+      <Text color="gray.500">
         Because Open Source plays a major part in how we build our products, we
-        see it as a matter of course to give the same effort back to our
-        community by creating valuable, free and easy-to-use software.
+        at Thala Labs see it as a matter of course to give the same effort back
+        to our community by creating valuable, free and easy-to-use software.
       </Text>
 
       <List spacing={3} my={0} color="text">
         <ListItem>
-          <ListIcon as={CheckCircleIcon} color="green.500" />
+          <ListIcon as={ExternalLinkIcon} color="green.500" />
           <ChakraLink
             isExternal
-            href="https://chakra-ui.com"
+            href="https://movetx.vercel.app"
             flexGrow={1}
             mr={2}
           >
-            Chakra UI <LinkIcon />
+            thala.run: Think Etherscan's Write Contract, but for Aptos
           </ChakraLink>
         </ListItem>
         <ListItem>
-          <ListIcon as={CheckCircleIcon} color="green.500" />
-          <ChakraLink isExternal href="https://nextjs.org" flexGrow={1} mr={2}>
-            Next.js <LinkIcon />
+          <ListIcon as={ExternalLinkIcon} color="green.500" />
+          <ChakraLink
+            isExternal
+            href="https://tap-eta.vercel.app"
+            flexGrow={1}
+            mr={2}
+          >
+            thala.tap: Claim MANY testnet BTC, ETH, USDC, etc on Aptos
           </ChakraLink>
         </ListItem>
       </List>
@@ -46,7 +51,9 @@ const Index = () => (
 
     <DarkModeSwitch />
     <Footer>
-      <Text>Thala Labs</Text>
+      <ChakraLink isExternal href="https://thala.fi">
+        By Thala Labs <ExternalLinkIcon />
+      </ChakraLink>
     </Footer>
   </Container>
 );
