@@ -32,7 +32,7 @@ const Index = () => (
             flexGrow={1}
             mr={2}
           >
-            thala.run: Think Etherscan's Write Contract, but for Aptos
+            Thala Run: Think Etherscan's Write Contract, but for Aptos
           </ChakraLink>
         </ListItem>
         <ListItem>
@@ -43,7 +43,7 @@ const Index = () => (
             flexGrow={1}
             mr={2}
           >
-            thala.tap: Claim MANY testnet BTC, ETH, USDC, etc on Aptos
+            Thala Faucet: Claim MANY testnet BTC, ETH, USDC, etc on Aptos
           </ChakraLink>
         </ListItem>
       </List>
