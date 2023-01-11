@@ -28,7 +28,7 @@ const Index = () => (
           <ListIcon as={ExternalLinkIcon} color="green.500" />
           <ChakraLink
             isExternal
-            href="https://movetx.vercel.app"
+            href="https://run.thala.dev"
             flexGrow={1}
             mr={2}
           >
@@ -39,7 +39,7 @@ const Index = () => (
           <ListIcon as={ExternalLinkIcon} color="green.500" />
           <ChakraLink
             isExternal
-            href="https://tap-eta.vercel.app"
+            href="https://faucet.thala.dev"
             flexGrow={1}
             mr={2}
           >
