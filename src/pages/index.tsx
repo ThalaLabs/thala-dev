@@ -14,11 +14,13 @@ import { DarkModeSwitch } from "../components/DarkModeSwitch";
 import { Footer } from "../components/Footer";
 
 const Index = () => (
+
   <Container height="100vh">
+    
     <Hero />
+
     <Main>
       <Text color="gray.500">
-
       At Thala Labs, one of our core principles is to build, publish, and maintain open-source software. 
       With OSS, we aim to advance the Move language's development to foster greater developer adoption 
       and applications built on top of Move Dollar and ThalaSwap. 
