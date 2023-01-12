@@ -18,9 +18,11 @@ const Index = () => (
     <Hero />
     <Main>
       <Text color="gray.500">
-        Because Open Source plays a major part in how we build our products, we
-        at Thala Labs see it as a matter of course to give the same effort back
-        to our community by creating valuable, free and easy-to-use software.
+      At Thala Labs, one of our core principles is to build, publish, and maintain open-source software. 
+      With OSS, we aim to advance the Move language's development to foster greater developer adoption 
+      and applications built on top of Move Dollar and ThalaSwap. 
+      
+      Here are some of our free and easy-to-use software:
       </Text>
 
       <List spacing={3} my={0} color="text">
@@ -32,7 +34,7 @@ const Index = () => (
             flexGrow={1}
             mr={2}
           >
-            Thala Run: Think Etherscan's Write Contract, but for Aptos
+            Thala Run: Etherscan's Write Contract, but for Aptos
           </ChakraLink>
         </ListItem>
         <ListItem>
@@ -43,7 +45,7 @@ const Index = () => (
             flexGrow={1}
             mr={2}
           >
-            Thala Faucet: Claim MANY testnet BTC, ETH, USDC, etc on Aptos
+            Thala Faucet: Claim extraordinary sums of testnet BTC, ETH, USDC, etc on Aptos
           </ChakraLink>
         </ListItem>
       </List>
