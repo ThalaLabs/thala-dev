@@ -11,7 +11,3 @@ export const Hero = ({ title }: { title: string }) => (
     <Heading fontSize="6vw">{title}</Heading>
   </Flex>
 );
-
-Hero.defaultProps = {
-  title: "thala.dev",
-};
