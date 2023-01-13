@@ -18,11 +18,26 @@ const Index = () => (
     <Hero />
     <Main>
       <Text color="gray.500">
-      At Thala Labs, one of our core principles is to build, publish, and maintain open-source software. 
-      With OSS, we aim to advance the Move language's development to foster greater developer adoption 
-      and applications built on top of Move Dollar and ThalaSwap. 
-      
-      Here are some of our free and easy-to-use software:
+        At Thala Labs, one of our core principles is to build, publish, and
+        maintain open-source software. With OSS, we aim to advance the Move
+        language's development to foster greater developer adoption and
+        applications built on top of{" "}
+        <ChakraLink
+          href="https://docs.thala.fi/thala-protocol-design/move-dollar-mod/stablecoin"
+          color="purple.500"
+          isExternal
+        >
+          Move Dollar
+        </ChakraLink>{" "}
+        and{" "}
+        <ChakraLink
+          href="https://docs.thala.fi/thala-protocol-design/thala-swap/pool-types"
+          color="purple.500"
+          isExternal
+        >
+          ThalaSwap
+        </ChakraLink>
+        . Here are some of our free and easy-to-use software:
       </Text>
 
       <List spacing={3} my={0} color="text">
@@ -45,7 +60,8 @@ const Index = () => (
             flexGrow={1}
             mr={2}
           >
-            Thala Faucet: Claim extraordinary sums of testnet BTC, ETH, USDC, etc on Aptos
+            Thala Faucet: Claim extraordinary sums of testnet BTC, ETH, USDC,
+            etc on Aptos
           </ChakraLink>
         </ListItem>
         <ListItem>
