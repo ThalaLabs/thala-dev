@@ -55,7 +55,7 @@ const Index = () => (
             flexGrow={1}
             mr={2}
           >
-            Thala Math: Precise Math64 Library 
+            Thala Math: Precise FixedPoint64 Library 
           </ChakraLink>
       </List>
     </Main>
