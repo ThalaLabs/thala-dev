@@ -48,6 +48,7 @@ const Index = () => (
             Thala Faucet: Claim extraordinary sums of testnet BTC, ETH, USDC, etc on Aptos
           </ChakraLink>
         </ListItem>
+        <ListItem>
           <ListIcon as={ExternalLinkIcon} color="green.500" />
           <ChakraLink
             isExternal
@@ -55,8 +56,9 @@ const Index = () => (
             flexGrow={1}
             mr={2}
           >
-            Thala Math: Precise FixedPoint64 Library 
+            Thala Math: Precise FixedPoint64 Math Library 
           </ChakraLink>
+          </ListItem>  
       </List>
     </Main>
 
