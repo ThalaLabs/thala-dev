@@ -15,7 +15,7 @@ import { Footer } from "../components/Footer";
 
 const Index = () => (
   <Container height="100vh">
-    <Hero />
+    <Hero title="thala.dev" />
     <Main>
       <Text color="gray.500">
         At Thala Labs, one of our core principles is to build, publish, and
@@ -37,7 +37,7 @@ const Index = () => (
         >
           ThalaSwap
         </ChakraLink>
-        . Here are some of our free and easy-to-use software:
+        . Here are what we build:
       </Text>
 
       <List spacing={3} my={0} color="text">
@@ -62,6 +62,17 @@ const Index = () => (
           >
             Thala Faucet: Claim extraordinary sums of testnet BTC, ETH, USDC,
             etc on Aptos
+          </ChakraLink>
+        </ListItem>
+        <ListItem>
+          <ListIcon as={ExternalLinkIcon} color="green.500" />
+          <ChakraLink
+            isExternal
+            href="https://github.com/ThalaLabs/fixed_point64"
+            flexGrow={1}
+            mr={2}
+          >
+            Thala FixedPoint64: Precise FixedPoint64 Math Library
           </ChakraLink>
         </ListItem>
       </List>
