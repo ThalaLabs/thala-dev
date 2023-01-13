@@ -48,6 +48,15 @@ const Index = () => (
             Thala Faucet: Claim extraordinary sums of testnet BTC, ETH, USDC, etc on Aptos
           </ChakraLink>
         </ListItem>
+          <ListIcon as={ExternalLinkIcon} color="green.500" />
+          <ChakraLink
+            isExternal
+            href="https://github.com/ThalaLabs/fixed_point64"
+            flexGrow={1}
+            mr={2}
+          >
+            Thala Math: Precise Math64 Library 
+          </ChakraLink>
       </List>
     </Main>
 
