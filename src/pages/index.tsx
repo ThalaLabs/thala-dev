@@ -37,7 +37,7 @@ const Index = () => (
         >
           ThalaSwap
         </ChakraLink>
-        . Here are what we build:
+        . Here's what we've built:
       </Text>
 
       <List spacing={3} my={0} color="text">
