@@ -61,6 +61,7 @@ const theme = extendTheme({
 
       body: {
         bg: "body-bg",
+        color: "white",
       },
     }),
   },
@@ -80,7 +81,7 @@ const theme = extendTheme({
       },
       "body-bg": {
         default: "#16161D",
-        _dark: "#0F0F1B",
+        _dark: "#1F202C",
       },
     },
     radii: {

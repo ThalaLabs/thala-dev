@@ -49,18 +49,13 @@ const Index = () => (
       <List spacing={3} my={0} color="text">
         <ListItem>
           <ListIcon as={ExternalLinkIcon} color="green.500" />
-          <ChakraLink
-            isExternal
-            href="https://run.thala.dev"
-            flexGrow={1}
-            mr={2}
-          >
+          <ChakraLink isExternal href="/run" flexGrow={1} mr={2}>
             Thala Run: Etherscan&apos;s Write Contract, but for Aptos
           </ChakraLink>
         </ListItem>
         <ListItem>
           <ListIcon as={ExternalLinkIcon} color="green.500" />
-          <ChakraLink isExternal href="/faucet/" flexGrow={1} mr={2}>
+          <ChakraLink isExternal href="/faucet" flexGrow={1} mr={2}>
             Thala Faucet: Claim extraordinary sums of testnet BTC, ETH, USDC,
             etc on Aptos
           </ChakraLink>

@@ -7,6 +7,7 @@ import { RiseWallet } from "@rise-wallet/wallet-adapter";
 import { TrustWallet } from "@trustwallet/aptos-wallet-adapter";
 import { SpikaWallet } from "@spika/aptos-plugin";
 import { Analytics } from "@vercel/analytics/react";
+import { MSafeWalletAdapter } from "msafe-plugin-wallet-adapter";
 
 import theme from "../theme";
 import { AppProps } from "next/app";
@@ -22,6 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           new RiseWallet(),
           new TrustWallet(),
           new SpikaWallet(),
+          new MSafeWalletAdapter(),
         ]}
         autoConnect={true}
       >
