@@ -36,7 +36,7 @@ const components = {
   Button: {
     variants: {
       solid: {
-        background: "grey.800",
+        background: "grey.900",
         color: "white",
       },
     },

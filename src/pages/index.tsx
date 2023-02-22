@@ -8,7 +8,6 @@ import {
 } from "@chakra-ui/react";
 
 import { Container } from "../components/Container";
-import { DarkModeSwitch } from "../components/DarkModeSwitch";
 import { Footer } from "../components/Footer";
 import { Hero } from "../components/Hero";
 import { Main } from "../components/Main";
@@ -74,7 +73,6 @@ const Index = () => (
       </List>
     </Main>
 
-    <DarkModeSwitch />
     <Footer>
       <ChakraLink isExternal href="https://thala.fi">
         By Thala Labs <ExternalLinkIcon />

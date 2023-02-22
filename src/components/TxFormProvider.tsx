@@ -25,7 +25,7 @@ export default function TxFormProvider({
     const subscription = watch(async (value) => {
       await router.push(
         {
-          pathname: "/",
+          pathname: "/run/",
           query: value as TxFormType,
         },
         undefined,

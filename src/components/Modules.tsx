@@ -70,7 +70,7 @@ export function Modules({ modules }: { modules: Types.MoveModule[] }) {
             {moduleFuncs.map(({ module, func }) => (
               <ListItem
                 key={func.name}
-                _hover={{ bgColor: "gray.100" }}
+                _hover={{ bgColor: "#232341" }}
                 bgColor={
                   formFunc === func.name && formModule === module.name
                     ? "gray.100"
