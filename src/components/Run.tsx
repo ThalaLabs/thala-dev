@@ -33,7 +33,7 @@ export function Run() {
 
   const { data, error } = useSWR<Types.MoveModuleBytecode>(
     [account, network, module],
-    (account, network, module) =>
+    ([account, network, module]: Array<string>) =>
       getAptosClient(network).getAccountModule(account, module)
   );
 
