@@ -19,7 +19,7 @@ export function ConnectWallet({ ...props }: ConnectWalletProps) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Button onClick={onOpen} {...props}>
+      <Button onClick={onOpen} {...props} colorScheme={"whiteAlpha"}>
         Connect Wallet
       </Button>
       <Modal isOpen={isOpen} onClose={onClose} isCentered>

@@ -36,7 +36,7 @@ const components = {
   Button: {
     variants: {
       solid: {
-        background: "grey.900",
+        background: "grey.800",
         color: "white",
       },
     },
@@ -80,7 +80,7 @@ const theme = extendTheme({
         _dark: "#fbec8f",
       },
       "body-bg": {
-        default: "#16161D",
+        default: "gray.900",
         _dark: "#1F202C",
       },
     },
