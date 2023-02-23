@@ -118,7 +118,7 @@ function ClaimCoins() {
 
   return (
     <Flex flexDirection={"column"} mt="10">
-      {coins.map((coin, index) => (
+      {coins.filter(coin => coin.symbol !== "TNT").map((coin) => (
         <Claim key={coin.name} coin={coin} />
       ))}
     </Flex>
