@@ -16,7 +16,7 @@ export const Hero = ({ title }: { title: string }) => {
       bgClip="text"
     >
       <Heading>
-        <Image src={isDark ? whiteLogo : blackLogo} width={320} height={50} alt="thala-logo" />
+        <Image src={whiteLogo} width={320} height={50} alt="thala-logo" />
       </Heading>
     </Flex>
   );

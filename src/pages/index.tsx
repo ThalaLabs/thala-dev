@@ -1,9 +1,5 @@
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import {
-  Box,
-  Flex,
-  Heading,
-  HStack,
   Link as ChakraLink,
   List,
   ListIcon,
@@ -12,7 +8,6 @@ import {
 } from "@chakra-ui/react";
 
 import { Container } from "../components/Container";
-import { Footer } from "../components/Footer";
 import { Hero } from "../components/Hero";
 import { Main } from "../components/Main";
 
@@ -76,16 +71,6 @@ const Index = () => (
         </ListItem>
       </List>
     </Main>
-
-    {/* <Footer>
-      <ChakraLink href="https://github.com/ThalaLabs/thala-run" isExternal>
-        GitHub <ExternalLinkIcon mx="2px" />
-      </ChakraLink>
-      <Box>|</Box>
-      <ChakraLink href="https://thala.fi" isExternal>
-        Built by Thala Labs <ExternalLinkIcon mx="2px" />
-      </ChakraLink>
-    </Footer> */}
   </Container>
 );
 
