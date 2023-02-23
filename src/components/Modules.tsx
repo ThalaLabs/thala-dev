@@ -58,8 +58,9 @@ export function Modules({ modules }: { modules: Types.MoveModule[] }) {
         placeholder="search..."
         onChange={(e) => setQuery(e.target.value)}
         my={2}
+        flexShrink="0"
       />
-      <List overflow={"auto"} cursor="pointer" maxHeight="calc(100vh - 200px)">
+      <List overflow={"auto"} cursor="pointer" flexGrow="1">
         {Object.entries(group).map(([moduleName, moduleFuncs]) => (
           <Box key={moduleName}>
             <Heading size="sm" my={3}>

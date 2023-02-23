@@ -1,5 +1,9 @@
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import {
+  Box,
+  Flex,
+  Heading,
+  HStack,
   Link as ChakraLink,
   List,
   ListIcon,
@@ -73,11 +77,15 @@ const Index = () => (
       </List>
     </Main>
 
-    <Footer>
-      <ChakraLink isExternal href="https://thala.fi">
-        By Thala Labs <ExternalLinkIcon />
+    {/* <Footer>
+      <ChakraLink href="https://github.com/ThalaLabs/thala-run" isExternal>
+        GitHub <ExternalLinkIcon mx="2px" />
       </ChakraLink>
-    </Footer>
+      <Box>|</Box>
+      <ChakraLink href="https://thala.fi" isExternal>
+        Built by Thala Labs <ExternalLinkIcon mx="2px" />
+      </ChakraLink>
+    </Footer> */}
   </Container>
 );
 
