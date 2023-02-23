@@ -27,7 +27,7 @@ import {
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 const TEST_COINS_ACCOUNT =
-  "0x03c27315fb69ba6e4b960f1507d1cefcc9a4247869f26a8d59d6b7869d23782c";
+  "0x3c27315fb69ba6e4b960f1507d1cefcc9a4247869f26a8d59d6b7869d23782c";
 const TESTNET_FULLNODE = "https://fullnode.testnet.aptoslabs.com";
 const client = new AptosClient(TESTNET_FULLNODE);
 const AMOUNT = 1000;
@@ -118,12 +118,84 @@ function ClaimCoins() {
 
   return (
     <Flex flexDirection={"column"} mt="10">
+      <ClaimAPT />
       {coins.filter(coin => coin.symbol !== "TNT").map((coin) => (
         <Claim key={coin.name} coin={coin} />
       ))}
     </Flex>
   );
 }
+
+function ClaimAPT() {
+  const { connected, signAndSubmitTransaction } = useWallet();
+  const toast = useToast();
+  const [txnPending, setTxnPending] = useState(false);
+
+  async function claim() {
+    const payload: Types.TransactionPayload = {
+      type: "entry_function_payload",
+      function: `${TEST_COINS_ACCOUNT}::test_coins::claim_from_bank`,
+      type_arguments: ["0x1::aptos_coin::AptosCoin"],
+      arguments: [],
+    };
+    try {
+      const { hash } = await signAndSubmitTransaction(payload);
+      setTxnPending(true);
+      await client
+        .waitForTransaction(hash, { checkSuccess: true })
+        .finally(() => setTxnPending(false));
+      toast({
+        title: "Transaction submitted.",
+        description: (
+          <Link
+            as={NextLink}
+            href={`https://explorer.aptoslabs.com/txn/${hash}?network=testnet`}
+            isExternal
+          >
+            View on explorer <ExternalLinkIcon mx="2px" />
+          </Link>
+        ),
+        status: "success",
+        duration: 5000,
+        isClosable: true,
+      });
+    } catch (error: any) {
+      console.log("error", error);
+      toast({
+        title: "An error occurred.",
+        description: error.message,
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+      });
+    }
+  }
+
+  return (
+    <Button
+      isLoading={txnPending}
+      disabled={!connected}
+      onClick={claim}
+      colorScheme="whiteAlpha"
+    >
+      <Grid templateColumns="repeat(12, 1fr)">
+        <GridItem colStart={5} colEnd={8} h="100%" display="flex">
+          <Image
+            src={"/assets/logos/apt.png"}
+            alt="coin-logo"
+            width={20}
+            height={20}
+            className="block sm:hidden"
+          />
+          <Box ml="2">
+            Claim 100 APT
+          </Box>
+        </GridItem>
+      </Grid>
+    </Button>
+  );
+}
+
 
 function Claim({ coin }: { coin: CoinInfo }) {
   const { connected, signAndSubmitTransaction } = useWallet();
