@@ -30,7 +30,7 @@ const TEST_COINS_ACCOUNT =
   "0x3c27315fb69ba6e4b960f1507d1cefcc9a4247869f26a8d59d6b7869d23782c";
 const TESTNET_FULLNODE = "https://fullnode.testnet.aptoslabs.com";
 const client = new AptosClient(TESTNET_FULLNODE);
-const AMOUNT = 1000;
+const DEFAULT_AMOUNT = 1000;
 
 interface CoinInfo {
   name: string;
@@ -103,6 +103,13 @@ function ConnectWalletModal() {
 }
 
 function ClaimCoins() {
+  const amounts: {[coinType: string]: number} = {
+    WBTC: 0.1,
+    WETH: 1,
+    USDC: 1000,
+    CAKE: 1000,
+    tAPT: 100,
+  }
   const [coins, setCoins] = useState<CoinInfo[]>([]);
 
   useEffect(() => {
@@ -120,7 +127,7 @@ function ClaimCoins() {
     <Flex flexDirection={"column"} mt="10">
       <ClaimAPT />
       {coins.filter(coin => coin.symbol !== "TNT").map((coin) => (
-        <Claim key={coin.name} coin={coin} />
+        <Claim key={coin.name} coin={coin} amount={amounts[coin.symbol] ?? DEFAULT_AMOUNT} />
       ))}
     </Flex>
   );
@@ -197,7 +204,8 @@ function ClaimAPT() {
 }
 
 
-function Claim({ coin }: { coin: CoinInfo }) {
+function Claim({ coin, amount }: { coin: CoinInfo, amount: number }) {
+  console.log(coin)
   const { connected, signAndSubmitTransaction } = useWallet();
   const toast = useToast();
   const [txnPending, setTxnPending] = useState(false);
@@ -209,7 +217,7 @@ function Claim({ coin }: { coin: CoinInfo }) {
       type_arguments: [
         `${TEST_COINS_ACCOUNT}::test_coins::${coin.symbol.toUpperCase()}`,
       ],
-      arguments: [(AMOUNT * 10 ** coin.decimals).toFixed(0)],
+      arguments: [(amount * 10 ** coin.decimals).toFixed(0)],
     };
     try {
       const { hash } = await signAndSubmitTransaction(payload);
@@ -261,7 +269,7 @@ function Claim({ coin }: { coin: CoinInfo }) {
             className="block sm:hidden"
           />
           <Box ml="2">
-            Claim {AMOUNT} {coin.symbol}
+            Claim {amount} {coin.symbol}
           </Box>
         </GridItem>
       </Grid>
