@@ -205,7 +205,6 @@ function ClaimAPT() {
 
 
 function Claim({ coin, amount }: { coin: CoinInfo, amount: number }) {
-  console.log(coin)
   const { connected, signAndSubmitTransaction } = useWallet();
   const toast = useToast();
   const [txnPending, setTxnPending] = useState(false);
