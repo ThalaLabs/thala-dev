@@ -9,7 +9,7 @@ export default class Document extends NextDocument {
           <meta property="og:title" content="Thala OSS" />
           <meta
             property="og:description"
-            content="One of our core principles is to build, publish, and maintain open-source software."
+            content="One of our core principles is to build, publish, and maintain open-source software"
           />
           <meta property="og:image" content="https://www.thala.dev/thala.png" />
         </Head>
