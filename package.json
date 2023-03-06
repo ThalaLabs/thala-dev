@@ -21,7 +21,7 @@
     "@trustwallet/aptos-wallet-adapter": "^0.1.4",
     "msafe-plugin-wallet-adapter": "^0.1.0",
     "@vercel/analytics": "^0.1.10",
-    "aptos": "^1.6.0",
+    "aptos": "^1.7.1",
     "eslint": "8.29.0",
     "eslint-config-next": "13.2.1",
     "framer-motion": "^10.0.1",
