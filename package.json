@@ -20,7 +20,7 @@
     "@spika/aptos-plugin": "^0.1.2",
     "@trustwallet/aptos-wallet-adapter": "^0.1.4",
     "msafe-plugin-wallet-adapter": "^0.1.0",
-    "@vercel/analytics": "^0.1.10",
+    "@vercel/analytics": "^0.1.11",
     "aptos": "^1.6.0",
     "eslint": "8.29.0",
     "eslint-config-next": "13.2.1",
