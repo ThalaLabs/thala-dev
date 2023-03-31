@@ -1,3 +1,5 @@
+"use client";
+
 import { HexString } from "aptos";
 import { NextApiRequest, NextApiResponse } from "next";
 import { getAptosClient } from "../../lib/utils";

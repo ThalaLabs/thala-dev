@@ -1,3 +1,5 @@
+"use client";
+
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import {
   Link as ChakraLink,

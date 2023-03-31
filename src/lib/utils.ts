@@ -1,5 +1,5 @@
 import { AptosClient, Types } from "aptos";
-import { ParsedUrlQuery } from "querystring";
+import { ReadonlyURLSearchParams } from "next/navigation";
 
 export const FULLNODES: { [network: string]: string } = {
   devnet: "https://fullnode.devnet.aptoslabs.com",
@@ -18,7 +18,7 @@ export function functionSignature(func: Types.MoveFunction): string {
 }
 
 export function parseArrayParam(
-  query: ParsedUrlQuery,
+  query: ReadonlyURLSearchParams,
   param: string
 ): string[] {
   if (query[param] === undefined) {

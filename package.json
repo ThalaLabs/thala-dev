@@ -19,14 +19,13 @@
     "@rise-wallet/wallet-adapter": "^0.1.2",
     "@spika/aptos-plugin": "^0.1.2",
     "@trustwallet/aptos-wallet-adapter": "^0.1.4",
-    "msafe-plugin-wallet-adapter": "^0.1.0",
     "@vercel/analytics": "^0.1.11",
     "aptos": "^1.7.2",
     "eslint": "8.29.0",
-    "eslint-config-next": "13.2.1",
     "framer-motion": "^10.0.1",
     "lodash": "^4.17.21",
-    "next": "latest",
+    "msafe-plugin-wallet-adapter": "^0.1.0",
+    "next": "^13.2.4",
     "petra-plugin-wallet-adapter": "^0.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -35,10 +34,11 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
+    "@hookform/devtools": "^4.3.0",
     "@types/node": "^18.14.2",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.0",
-    "typescript": "^4.9.5",
-    "@hookform/devtools": "^4.3.0"
+    "eslint-config-next": "^13.2.4",
+    "typescript": "^4.9.5"
   }
 }
