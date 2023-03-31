@@ -40,10 +40,6 @@ interface CoinInfo {
   decimals: number;
 }
 
-export const metadata = {
-  title: "Thala Faucet",
-};
-
 export default function Faucet() {
   return (
     <>
