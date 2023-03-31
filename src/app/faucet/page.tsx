@@ -1,5 +1,3 @@
-"use client";
-
 import { useWallet } from "@aptos-labs/wallet-adapter-react";
 import { AptosClient, Types } from "aptos";
 import { useEffect, useState } from "react";
