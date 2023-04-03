@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 
 import TxForm from "../../components/TxForm";
@@ -11,22 +10,21 @@ import { NetworkType, TxFormType } from "../../lib/schema";
 export default function Home() {
   const query = useSearchParams();
 
-  const [defaultValues, setDefaultValues] = useState<TxFormType>();
+  const defaultValues: TxFormType = {
+    network: (query["network"] || "mainnet") as NetworkType,
+    account: (query["account"] || "0x1") as string,
+    module: (query["module"] || "") as string,
+    func: (query["func"] || "") as string,
+    typeArgs: parseArrayParam(query, "typeArgs") || [], // set default to empty array
+    args: parseArrayParam(query, "args") || [], // set default to empty array
+  };
 
-  useEffect(() => {
-    const defaultValues: TxFormType = {
-      network: (query["network"] || "mainnet") as NetworkType,
-      account: (query["account"] || "0x1") as string,
-      module: (query["module"] || "") as string,
-      func: (query["func"] || "") as string,
-      typeArgs: parseArrayParam(query, "typeArgs"),
-      args: parseArrayParam(query, "args"),
-    };
-    setDefaultValues(defaultValues);
-  }, [query]);
+  // check if all query parameters are empty
+  const isQueryEmpty =
+    Object.keys(query).length === 0 && query.constructor === Object;
 
-  if (!defaultValues) {
-    return;
+  if (isQueryEmpty) {
+    defaultValues.account = "0x1";
   }
 
   return (
