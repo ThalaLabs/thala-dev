@@ -1,6 +1,8 @@
+"use client";
+
 import { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import { TxFormSchema, TxFormType } from "../lib/schema";
@@ -24,12 +26,11 @@ export default function TxFormProvider({
   useEffect(() => {
     const subscription = watch(async (value) => {
       await router.push(
-        {
-          pathname: "/run/",
-          query: value as TxFormType,
-        },
-        undefined,
-        { shallow: true }
+        `/run?network=${value.network}&account=${value.account}&module=${
+          value.module
+        }&func=${value.func}&typeArgs=${value.typeArgs?.join(
+          ","
+        )}&args=${value.args?.join(",")}`
       );
     });
     return () => subscription.unsubscribe();

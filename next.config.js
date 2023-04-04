@@ -5,6 +5,9 @@ const nextConfig = {
     domains: ["miro.medium.com"],
     unoptimized: true,
   },
+  experimental: {
+    appDir: true,
+  },
 };
 
 module.exports = nextConfig;
