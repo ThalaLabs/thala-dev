@@ -57,6 +57,7 @@ const theme = extendTheme({
     global: (props: any) => ({
       "*": {
         borderColor: "gray.700",
+        color: "white",
       },
 
       body: {
