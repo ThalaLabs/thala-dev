@@ -934,9 +934,9 @@
     use-deep-compare-effect "^1.8.1"
     uuid "^8.3.2"
 
-"@hookform/resolvers@^2.9.11":
-  version "2.9.11"
-  resolved "https://registry.npmjs.org/@hookform/resolvers/-/resolvers-2.9.11.tgz"
+"@hookform/resolvers@^3.0.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@hookform/resolvers/-/resolvers-3.1.0.tgz#ff83ef4aa6078173201da131ceea4c3583b67034"
 
 "@humanwhocodes/config-array@^0.11.6":
   version "0.11.8"
@@ -2963,9 +2963,9 @@ supports-preserve-symlinks-flag@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz"
 
-swr@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.npmjs.org/swr/-/swr-2.1.1.tgz"
+swr@^2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/swr/-/swr-2.1.4.tgz#f5b5cfb3d43f04beb23ae012e0b0c9f8ec395ed1"
   dependencies:
     use-sync-external-store "^1.2.0"
 
