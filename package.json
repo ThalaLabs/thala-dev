@@ -20,7 +20,7 @@
     "@spika/aptos-plugin": "^0.1.2",
     "@trustwallet/aptos-wallet-adapter": "^0.1.4",
     "@vercel/analytics": "^0.1.11",
-    "aptos": "^1.7.2",
+    "aptos": "^1.11.0",
     "eslint": "8.29.0",
     "framer-motion": "^10.0.1",
     "lodash": "^4.17.21",
